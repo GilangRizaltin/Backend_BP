@@ -71,7 +71,7 @@ To run this project, you will need to add the following environment variables to
 
 ## Documentation
 
-[Postman Documentation](https://web.postman.co/documentation/29696636-10b95d2f-b728-4543-bc94-46df547fcc2a/publish?workspaceId=719b1b64-d4cc-4113-8b36-906934388569)
+[Postman Documentation](https://documenter.getpostman.com/view/29696636/2s9YywfKWF)
 
 ## Related Project
 
