@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS "bintangpelajar".kantor_pengguna;

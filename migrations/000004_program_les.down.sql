@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS "bintangpelajar".program_les;
