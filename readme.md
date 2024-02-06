@@ -54,17 +54,20 @@ To run this project, you will need to add the following environment variables to
 
 #### Authentication & Authorization
 
-| Method | Endpoint           | Description                        |
-| :----- | :----------------- | :--------------------------------- |
-| `post` | `"/auth/register"` | register user                      |
-| `post` | `"/auth/login"`    | get access and identity of user    |
-| `post` | `"/auth/logout"`   | delete access and identity of user |
+| Method | Endpoint           | Description                     |
+| :----- | :----------------- | :------------------------------ |
+| `post` | `"/auth/register"` | register user                   |
+| `post` | `"/auth/login"`    | get access and identity of user |
 
 #### Users
 
-| Method | Endpoint          | Description      |
-| :----- | :---------------- | :--------------- |
-| `get`  | `"/user/profile"` | Get profile user |
+| Method   | Endpoint                      | Description                    |
+| :------- | :---------------------------- | :----------------------------- |
+| `get`    | `"/user/student"`             | Get all student                |
+| `get`    | `"/user/profile"`             | Get student's profile          |
+| `patch`  | `"/user/profile"`             | Update student's profile       |
+| `patch`  | `"/user/profile/:student_id"` | Get student's profile by admin |
+| `delete` | `"/user/:student_id"`         | Delete student                 |
 
 ## Documentation
 
