@@ -5,9 +5,14 @@ const getStudentData = async (req, res) => {
     try {
         const {office} = req.userInfo
         // console.log(user_office)
+        if (office === "No data") {
+            return res.status(403).json({
+                msg: `Access Denied`,
+            });
+        }
         const result = await getStudent(office);
         if (result.rowCount === 0) {
-            return res.status(201).json({
+            return res.status(404).json({
                 msg: `Data not found`,
             });
         }
@@ -29,7 +34,7 @@ const getStudentProfile = async (req, res) => {
         // console.log(user_office)
         const result = await getProfile(id);
         if (result.rowCount === 0) {
-            return res.status(201).json({
+            return res.status(404).json({
                 msg: `Data not found`,
             });
         }
@@ -68,7 +73,7 @@ const editStudentData = async (req, res) => {
         const {body} = req;
         const result = await editStudent(id, body)
         if (result.rowCount === 0) {
-            return res.status(201).json({
+            return res.status(404).json({
                 msg: `Data not found`,
             });
         };
@@ -109,7 +114,7 @@ const deleteStudentData = async (req, res) => {
         const { params } = req;
         const result = await deleteStudent(params.student_id);
         if (result.rowCount === 0) {
-            return res.status(201).json({
+            return res.status(404).json({
                 msg: `Data not found`,
             });
         }
